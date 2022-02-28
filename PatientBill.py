@@ -1,3 +1,4 @@
+from pickle import TRUE
 import PatientClass as pa
 import ProcedureClass as pr
 
@@ -39,6 +40,9 @@ def main():
         total+=procThree.get_pay()
         print()
 
+    if patient.get_veteran():
+        total*=.6
+        
     print("Total Charges: ","$",format(total, "<,.2f"), sep='')
 
 main()
